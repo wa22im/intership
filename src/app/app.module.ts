@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './pages/home/home-page/home-page.component';
 import { NavBarComponent } from './layouts/nav-bar/nav-bar.component';
@@ -20,10 +19,16 @@ import { SubmitFormComponent } from './pages/data/components/submit-form/submit-
 import { NzInputModule } from 'ng-zorro-antd/input';
 
 import { AppRoutingModule } from './app-routing.module';
+import { AngularFireModule } from '@angular/fire';
+import {  AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
-
+import { environment } from 'src/environments/environment';
+import { FirebaseService } from './services/firebase.service';
+import { PayButtonComponent } from './pages/home/pay-button/pay-button.component';
 
 registerLocaleData(fr);
+
 
 @NgModule({
   declarations: [
@@ -31,8 +36,8 @@ registerLocaleData(fr);
     HomePageComponent,
     NavBarComponent,
     DataComponent,
-    SubmitFormComponent
-    
+    SubmitFormComponent,
+    PayButtonComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,9 +48,13 @@ registerLocaleData(fr);
     NzDropDownModule,
     NzMenuModule,
     NzButtonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    AngularFirestoreModule,
+    
   ],
-  providers: [{ provide: NZ_I18N, useValue: fr_BE }],
-  bootstrap: [AppComponent]
+  providers: [FirebaseService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
