@@ -14,6 +14,7 @@ import fr from '@angular/common/locales/fr';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
+import { NzButtonModule } from 'ng-zorro-antd/button';
 
 
 registerLocaleData(fr);
@@ -33,7 +34,8 @@ registerLocaleData(fr);
     BrowserAnimationsModule,
     NzLayoutModule,
     NzDropDownModule,
-    NzMenuModule
+    NzMenuModule,
+    NzButtonModule
   ],
   providers: [{ provide: NZ_I18N, useValue: fr_BE }],
   bootstrap: [AppComponent]
