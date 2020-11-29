@@ -2,21 +2,29 @@
   width: 100vw;
   height: 100vh;
   background: white;
+  display: block;
 }
 
 .body-app {
-  margin-left: 30%;
-  margin-right: 30%;
-  position: fixed;
-  width: 375px;
-  height: 667px;
-  background: rgb(1, 5, 10);
-  background: linear-gradient(
-    9deg,
-    rgba(165, 173, 182, 0.6898109585631127) 0%,
-    rgba(189, 189, 176, 1) 100%,
-    rgba(181, 181, 176, 1) 100%
-  );
-
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 600px;
   border: white thin;
+}
+nz-layout {
+  border-radius: 3em;
+  margin-bottom: 48px;
+  border-radius: 3em;
+  margin-bottom: 48px;
+  background:  #EDF3FA;
+
+}
+nz-header {
+  border-radius: 3em;
+  background:  #EDF3FA;
+  padding-left: 4%;
 }
