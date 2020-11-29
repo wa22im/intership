@@ -1,0 +1,22 @@
+.surface-app {
+  width: 100vw;
+  height: 100vh;
+  background: white;
+}
+
+.body-app {
+  margin-left: 30%;
+  margin-right: 30%;
+  position: fixed;
+  width: 375px;
+  height: 667px;
+  background: rgb(1, 5, 10);
+  background: linear-gradient(
+    9deg,
+    rgba(165, 173, 182, 0.6898109585631127) 0%,
+    rgba(189, 189, 176, 1) 100%,
+    rgba(181, 181, 176, 1) 100%
+  );
+
+  border: white thin;
+}
