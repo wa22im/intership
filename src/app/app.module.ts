@@ -15,6 +15,12 @@ import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzButtonModule } from 'ng-zorro-antd/button';
+import { DataComponent } from './pages/data/data.component';
+import { SubmitFormComponent } from './pages/data/components/submit-form/submit-form.component';
+import { NzInputModule } from 'ng-zorro-antd/input';
+
+import { AppRoutingModule } from './app-routing.module';
+
 
 
 registerLocaleData(fr);
@@ -24,7 +30,8 @@ registerLocaleData(fr);
     AppComponent,
     HomePageComponent,
     NavBarComponent,
-    
+    DataComponent,
+    SubmitFormComponent
     
   ],
   imports: [
@@ -35,7 +42,8 @@ registerLocaleData(fr);
     NzLayoutModule,
     NzDropDownModule,
     NzMenuModule,
-    NzButtonModule
+    NzButtonModule,
+    AppRoutingModule
   ],
   providers: [{ provide: NZ_I18N, useValue: fr_BE }],
   bootstrap: [AppComponent]
